@@ -1,0 +1,139 @@
+.document-list {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fdfdfd;
+  border-radius: 8px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.document-list h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.document-item {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background: #f8faff;
+  border: 1px solid #d8e6f3;
+  border-radius: 8px;
+  transition: box-shadow 0.2s ease;
+}
+
+.document-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.doc-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: nowrap; /* Tot pe o singură linie */
+}
+
+.title {
+  min-width: 150px;
+  white-space: nowrap;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.badge,
+.expires {
+  min-width: 150px;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #333;
+}
+
+.edit-btn,
+.delete-btn {
+  min-width: 80px;
+  white-space: nowrap;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #2980b9;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #2471a3;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.expired {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.expiring {
+  color: #e67e22;
+  font-weight: bold;
+}
+
+.status-message {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.status-message.red {
+  color: #e74c3c;
+}
+
+.status-message.orange {
+  color: #f39c12;
+}
+
+/* Pentru ecrane mai mici de 768px */
+@media (max-width: 768px) {
+  .doc-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .document-item {
+    padding: 12px;
+  }
+}
